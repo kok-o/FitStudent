@@ -1,0 +1,454 @@
+openapi: 3.0.3
+info:
+  title: Fitness App API
+  version: 0.1.0
+  description: MVP API for authentication, profile, activity, workouts, notifications
+servers:
+  - url: /api
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Role:
+      type: string
+      enum: [STUDENT, ADMIN]
+    Goal:
+      type: string
+      enum: [LOSE, MAINTAIN, GAIN]
+    ActivityLevel:
+      type: string
+      enum: [SEDENTARY, MODERATE, ACTIVE]
+    User:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        email: { type: string, format: email }
+        name: { type: string }
+        age: { type: integer }
+        gender: { type: string, enum: [male, female, other] }
+        height: { type: number, format: double, description: cm }
+        weight: { type: number, format: double, description: kg }
+        goal: { $ref: '#/components/schemas/Goal' }
+        activityLevel: { $ref: '#/components/schemas/ActivityLevel' }
+        role: { $ref: '#/components/schemas/Role' }
+    RegisterRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string, format: password }
+        name: { type: string }
+        age: { type: integer }
+        gender: { type: string }
+        height: { type: number }
+        weight: { type: number }
+        goal: { $ref: '#/components/schemas/Goal' }
+        activityLevel: { $ref: '#/components/schemas/ActivityLevel' }
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string, format: password }
+    AuthResponse:
+      type: object
+      properties:
+        token: { type: string }
+        user: { $ref: '#/components/schemas/User' }
+    ProfileCalculations:
+      type: object
+      properties:
+        bmi: { type: number }
+        bmr: { type: number }
+        tdee: { type: number }
+        targetCalories: { type: number }
+        macros:
+          type: object
+          properties:
+            protein_g: { type: number }
+            fat_g: { type: number }
+            carbs_g: { type: number }
+    Preferences:
+      type: object
+      properties:
+        preferredTrainingTypes:
+          type: array
+          items:
+            type: string
+            enum: [cardio, strength, yoga, stretch]
+        preferredTimeOfDay:
+          type: string
+          enum: [morning, afternoon, evening]
+        equipment:
+          type: array
+          items: { type: string }
+    ActivityPoint:
+      type: object
+      properties:
+        timestamp: { type: string, format: date-time }
+        value: { type: number }
+        type: { type: string, enum: [steps, calories, sleep] }
+    WaterEntry:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        timestamp: { type: string, format: date-time }
+        ml: { type: integer }
+    NutritionEntry:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        timestamp: { type: string, format: date-time }
+        food: { type: string }
+        calories: { type: integer }
+        protein_g: { type: number }
+        fat_g: { type: number }
+        carbs_g: { type: number }
+    Workout:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        title: { type: string }
+        description: { type: string }
+        type: { type: string, enum: [cardio, strength, yoga, stretch] }
+        level: { type: string, enum: [BEGINNER, MEDIUM, ADVANCED] }
+        expectedDurationMin: { type: integer }
+        expectedCalories: { type: integer }
+        mediaUrls: { type: array, items: { type: string, format: uri } }
+    UserWorkout:
+      type: object
+      properties:
+        workoutId: { type: integer, format: int64 }
+        completedAt: { type: string, format: date-time }
+        actualDuration: { type: integer }
+        actualCalories: { type: integer }
+    Notification:
+      type: object
+      properties:
+        id: { type: integer, format: int64 }
+        title: { type: string }
+        body: { type: string }
+        read: { type: boolean }
+        createdAt: { type: string, format: date-time }
+    NotificationSettings:
+      type: object
+      properties:
+        workoutReminders: { type: boolean }
+        waterReminders: { type: boolean }
+        dailyGoalReminders: { type: boolean }
+        quietHoursStart: { type: string }
+        quietHoursEnd: { type: string }
+paths:
+  /auth/register:
+    post:
+      tags: [Authentication]
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/RegisterRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AuthResponse' }
+  /auth/login:
+    post:
+      tags: [Authentication]
+      summary: Login user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/LoginRequest' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AuthResponse' }
+  /user/profile:
+    get:
+      tags: [User]
+      security: [{ bearerAuth: [] }]
+      summary: Get current user profile
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/User' }
+    put:
+      tags: [User]
+      security: [{ bearerAuth: [] }]
+      summary: Update current user profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/User' }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/User' }
+  /user/profile/calculations:
+    get:
+      tags: [User]
+      security: [{ bearerAuth: [] }]
+      summary: Get BMI/BMR/TDEE and macros
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ProfileCalculations' }
+  /activity/import:
+    post:
+      tags: [Activity]
+      security: [{ bearerAuth: [] }]
+      summary: Bulk import of steps/sleep/calories
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items: { $ref: '#/components/schemas/ActivityPoint' }
+      responses:
+        '204': { description: No Content }
+  /activity/range:
+    get:
+      tags: [Activity]
+      security: [{ bearerAuth: [] }]
+      summary: Get activity points by type in date range
+      parameters:
+        - in: query
+          name: type
+          required: true
+          schema: { type: string, enum: [steps, calories, sleep] }
+        - in: query
+          name: from
+          schema: { type: string, format: date-time }
+        - in: query
+          name: to
+          schema: { type: string, format: date-time }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/ActivityPoint' }
+  /activity/water:
+    get:
+      tags: [Activity]
+      security: [{ bearerAuth: [] }]
+      summary: Get water entries
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/WaterEntry' }
+    post:
+      tags: [Activity]
+      security: [{ bearerAuth: [] }]
+      summary: Add water entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/WaterEntry' }
+      responses:
+        '201': { description: Created }
+  /activity/water/{id}:
+    put:
+      tags: [Activity]
+      security: [{ bearerAuth: [] }]
+      summary: Update water entry
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer, format: int64 }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/WaterEntry' }
+      responses:
+        '200': { description: OK }
+  /activity/nutrition:
+    get:
+      tags: [Activity]
+      security: [{ bearerAuth: [] }]
+      summary: Get nutrition entries
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/NutritionEntry' }
+    post:
+      tags: [Activity]
+      security: [{ bearerAuth: [] }]
+      summary: Add nutrition entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/NutritionEntry' }
+      responses:
+        '201': { description: Created }
+  /activity/export.csv:
+    get:
+      tags: [Activity]
+      security: [{ bearerAuth: [] }]
+      summary: Export activity as CSV
+      parameters:
+        - in: query
+          name: from
+          schema: { type: string, format: date-time }
+        - in: query
+          name: to
+          schema: { type: string, format: date-time }
+      responses:
+        '200':
+          description: CSV file
+          content:
+            text/csv:
+              schema: { type: string, format: binary }
+  /workouts:
+    get:
+      tags: [Workouts]
+      summary: Get all workouts
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Workout' }
+  /workouts/level/{level}:
+    get:
+      tags: [Workouts]
+      summary: Get workouts by level
+      parameters:
+        - in: path
+          name: level
+          required: true
+          schema: { type: string, enum: [BEGINNER, MEDIUM, ADVANCED] }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Workout' }
+  /workouts/{workoutId}/complete:
+    post:
+      tags: [Workouts]
+      security: [{ bearerAuth: [] }]
+      summary: Mark workout as completed
+      parameters:
+        - in: path
+          name: workoutId
+          required: true
+          schema: { type: integer, format: int64 }
+        - in: query
+          name: actualDuration
+          schema: { type: integer }
+        - in: query
+          name: actualCalories
+          schema: { type: integer }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/UserWorkout' }
+  /workouts/{workoutId}/completed:
+    get:
+      tags: [Workouts]
+      security: [{ bearerAuth: [] }]
+      summary: Check if workout is completed
+      parameters:
+        - in: path
+          name: workoutId
+          required: true
+          schema: { type: integer, format: int64 }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { type: boolean }
+  /notifications:
+    get:
+      tags: [Notifications]
+      security: [{ bearerAuth: [] }]
+      summary: Get user notifications
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Notification' }
+  /notifications/unread:
+    get:
+      tags: [Notifications]
+      security: [{ bearerAuth: [] }]
+      summary: Get unread notifications
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Notification' }
+  /notifications/unread-count:
+    get:
+      tags: [Notifications]
+      security: [{ bearerAuth: [] }]
+      summary: Get unread notifications count
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { type: integer, format: int64 }
+  /notifications/{id}/read:
+    put:
+      tags: [Notifications]
+      security: [{ bearerAuth: [] }]
+      summary: Mark as read
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer, format: int64 }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Notification' }

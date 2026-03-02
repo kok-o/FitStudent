@@ -1,0 +1,3327 @@
+2026-02-26 16:50:43.336 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Starting FitnessAppApplication using Java 25.0.1 with PID 4960 (C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes started by esenb in C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring)
+2026-02-26 16:50:43.337 [restartedMain] DEBUG c.c.fitnessapp.FitnessAppApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-02-26 16:50:43.338 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 16:50:43.629 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 16:50:43.678 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 11 JPA repository interfaces.
+2026-02-26 16:50:43.800 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 16:50:43.803 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 16:50:43.803 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-02-26 16:50:43.828 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 16:50:43.829 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 490 ms
+2026-02-26 16:50:43.908 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 16:50:43.912 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 16:50:43.927 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 16:50:43.928 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Starting...
+2026-02-26 16:50:43.996 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-22 - Added connection org.postgresql.jdbc.PgConnection@37ec02fd
+2026-02-26 16:50:43.996 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Start completed.
+2026-02-26 16:50:44.005 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 16:50:44.007 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-22)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 16:50:44.205 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 16:50:44.352 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:50:44.424 [restartedMain] DEBUG c.c.f.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-26 16:50:44.779 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 16:50:44.906 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-26 16:50:44.906 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-26 16:50:44.936 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-02-26 16:50:45.100 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 16:50:45.113 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 16:50:45.118 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Started FitnessAppApplication in 1.971 seconds (process running for 9436.27)
+2026-02-26 16:50:45.144 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-26 16:50:45.150 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-02-26 16:50:45.151 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-02-26 16:50:49.664 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-26 16:50:49.666 [Thread-93] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-26 16:50:49.673 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-26 16:50:49.676 [Thread-93] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:50:49.677 [Thread-93] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown initiated...
+2026-02-26 16:50:49.679 [Thread-93] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown completed.
+2026-02-26 16:50:49.835 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Starting FitnessAppApplication using Java 25.0.1 with PID 4960 (C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes started by esenb in C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring)
+2026-02-26 16:50:49.835 [restartedMain] DEBUG c.c.fitnessapp.FitnessAppApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-02-26 16:50:49.835 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 16:50:50.116 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 16:50:50.175 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 11 JPA repository interfaces.
+2026-02-26 16:50:50.318 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 16:50:50.319 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 16:50:50.320 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-02-26 16:50:50.339 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 16:50:50.339 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 502 ms
+2026-02-26 16:50:50.376 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 16:50:50.379 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 16:50:50.388 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 16:50:50.388 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Starting...
+2026-02-26 16:50:50.443 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-23 - Added connection org.postgresql.jdbc.PgConnection@62ab54f6
+2026-02-26 16:50:50.444 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Start completed.
+2026-02-26 16:50:50.451 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 16:50:50.452 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-23)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 16:50:50.617 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 16:50:50.763 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:50:50.822 [restartedMain] DEBUG c.c.f.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-26 16:50:51.084 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 16:50:51.168 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-26 16:50:51.168 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-26 16:50:51.292 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 16:50:51.322 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 16:50:51.325 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Started FitnessAppApplication in 1.531 seconds (process running for 9442.477)
+2026-02-26 16:50:51.352 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-26 16:50:51.357 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-02-26 16:50:51.360 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-02-26 16:51:03.055 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-26 16:51:03.057 [Thread-97] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-26 16:51:03.063 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-26 16:51:03.067 [Thread-97] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:51:03.068 [Thread-97] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Shutdown initiated...
+2026-02-26 16:51:03.072 [Thread-97] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Shutdown completed.
+2026-02-26 16:51:03.227 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Starting FitnessAppApplication using Java 25.0.1 with PID 4960 (C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes started by esenb in C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring)
+2026-02-26 16:51:03.228 [restartedMain] DEBUG c.c.fitnessapp.FitnessAppApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-02-26 16:51:03.228 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 16:51:03.533 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 16:51:03.579 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 11 JPA repository interfaces.
+2026-02-26 16:51:03.674 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 16:51:03.674 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 16:51:03.675 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-02-26 16:51:03.698 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 16:51:03.698 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 467 ms
+2026-02-26 16:51:03.740 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 16:51:03.742 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 16:51:03.750 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 16:51:03.752 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Starting...
+2026-02-26 16:51:03.800 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-24 - Added connection org.postgresql.jdbc.PgConnection@2ca97fbd
+2026-02-26 16:51:03.800 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Start completed.
+2026-02-26 16:51:03.805 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 16:51:03.806 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-24)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 16:51:03.934 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 16:51:04.055 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:51:04.110 [restartedMain] DEBUG c.c.f.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-26 16:51:04.249 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'foodCheckController' defined in file [C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes\com\cursorai\fitnessapp\controller\FoodCheckController.class]: Failed to instantiate [com.cursorai.fitnessapp.controller.FoodCheckController]: Constructor threw exception
+2026-02-26 16:51:04.250 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:51:04.250 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Shutdown initiated...
+2026-02-26 16:51:04.255 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Shutdown completed.
+2026-02-26 16:51:04.256 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-02-26 16:51:04.259 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-26 16:51:04.261 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'foodCheckController' defined in file [C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes\com\cursorai\fitnessapp\controller\FoodCheckController.class]: Failed to instantiate [com.cursorai.fitnessapp.controller.FoodCheckController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1242)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.cursorai.fitnessapp.FitnessAppApplication.main(FitnessAppApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.cursorai.fitnessapp.controller.FoodCheckController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1351)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	RequiredArgsConstructor cannot be resolved to a type
+
+	at com.cursorai.fitnessapp.controller.FoodCheckController.<init>(FoodCheckController.java:26)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197)
+	... 24 common frames omitted
+2026-02-26 16:51:05.746 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Starting FitnessAppApplication using Java 25.0.1 with PID 4960 (C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes started by esenb in C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring)
+2026-02-26 16:51:05.746 [restartedMain] DEBUG c.c.fitnessapp.FitnessAppApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-02-26 16:51:05.746 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 16:51:06.053 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 16:51:06.104 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 11 JPA repository interfaces.
+2026-02-26 16:51:06.204 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 16:51:06.206 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 16:51:06.206 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-02-26 16:51:06.230 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 16:51:06.230 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 482 ms
+2026-02-26 16:51:06.269 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 16:51:06.272 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 16:51:06.279 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 16:51:06.280 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Starting...
+2026-02-26 16:51:06.338 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-25 - Added connection org.postgresql.jdbc.PgConnection@425ffc7c
+2026-02-26 16:51:06.338 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Start completed.
+2026-02-26 16:51:06.345 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 16:51:06.346 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-25)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 16:51:06.487 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 16:51:06.634 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:51:06.693 [restartedMain] DEBUG c.c.f.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-26 16:51:06.853 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'foodCheckController' defined in file [C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes\com\cursorai\fitnessapp\controller\FoodCheckController.class]: Failed to instantiate [com.cursorai.fitnessapp.controller.FoodCheckController]: Constructor threw exception
+2026-02-26 16:51:06.853 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:51:06.854 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Shutdown initiated...
+2026-02-26 16:51:06.882 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Shutdown completed.
+2026-02-26 16:51:06.883 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-02-26 16:51:06.886 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-02-26 16:51:06.888 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'foodCheckController' defined in file [C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes\com\cursorai\fitnessapp\controller\FoodCheckController.class]: Failed to instantiate [com.cursorai.fitnessapp.controller.FoodCheckController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1242)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.cursorai.fitnessapp.FitnessAppApplication.main(FitnessAppApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.cursorai.fitnessapp.controller.FoodCheckController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1351)
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	RequiredArgsConstructor cannot be resolved to a type
+
+	at com.cursorai.fitnessapp.controller.FoodCheckController.<init>(FoodCheckController.java:26)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197)
+	... 24 common frames omitted
+2026-02-26 16:51:11.463 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Starting FitnessAppApplication using Java 25.0.1 with PID 4960 (C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes started by esenb in C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring)
+2026-02-26 16:51:11.463 [restartedMain] DEBUG c.c.fitnessapp.FitnessAppApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-02-26 16:51:11.463 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 16:51:11.764 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 16:51:11.813 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 11 JPA repository interfaces.
+2026-02-26 16:51:11.913 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 16:51:11.914 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 16:51:11.914 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-02-26 16:51:11.941 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 16:51:11.941 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 477 ms
+2026-02-26 16:51:11.982 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 16:51:11.985 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 16:51:11.990 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 16:51:11.991 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Starting...
+2026-02-26 16:51:12.042 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-26 - Added connection org.postgresql.jdbc.PgConnection@63cd84b8
+2026-02-26 16:51:12.042 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Start completed.
+2026-02-26 16:51:12.048 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 16:51:12.049 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-26)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 16:51:12.227 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 16:51:12.341 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:51:12.388 [restartedMain] DEBUG c.c.f.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-26 16:51:12.603 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 16:51:12.688 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-26 16:51:12.688 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-26 16:51:12.827 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 16:51:12.836 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 16:51:12.839 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Started FitnessAppApplication in 1.401 seconds (process running for 9463.991)
+2026-02-26 16:51:12.856 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-26 16:51:12.863 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-02-26 16:51:12.864 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-02-26 16:51:39.444 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-26 16:51:39.445 [Thread-101] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-26 16:51:39.455 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-26 16:51:39.459 [Thread-101] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:51:39.459 [Thread-101] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Shutdown initiated...
+2026-02-26 16:51:39.460 [Thread-101] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Shutdown completed.
+2026-02-26 16:51:39.623 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Starting FitnessAppApplication using Java 25.0.1 with PID 4960 (C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring\target\classes started by esenb in C:\Users\esenb\OneDrive\Pictures\important\dart-java-spring)
+2026-02-26 16:51:39.623 [restartedMain] DEBUG c.c.fitnessapp.FitnessAppApplication - Running with Spring Boot v3.5.7, Spring v6.2.12
+2026-02-26 16:51:39.623 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 16:51:40.028 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-26 16:51:40.094 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 11 JPA repository interfaces.
+2026-02-26 16:51:40.249 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-26 16:51:40.250 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-26 16:51:40.250 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-02-26 16:51:40.279 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-26 16:51:40.279 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 654 ms
+2026-02-26 16:51:40.332 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-26 16:51:40.335 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-26 16:51:40.347 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-26 16:51:40.348 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Starting...
+2026-02-26 16:51:40.412 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-27 - Added connection org.postgresql.jdbc.PgConnection@5db9d68
+2026-02-26 16:51:40.412 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Start completed.
+2026-02-26 16:51:40.419 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-26 16:51:40.420 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-27)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-26 16:51:40.594 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-26 16:51:40.729 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-26 16:51:40.826 [restartedMain] DEBUG c.c.f.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-02-26 16:51:41.247 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-26 16:51:41.399 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-02-26 16:51:41.400 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-02-26 16:51:41.618 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-02-26 16:51:41.634 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-26 16:51:41.639 [restartedMain] INFO  c.c.fitnessapp.FitnessAppApplication - Started FitnessAppApplication in 2.054 seconds (process running for 9492.79)
+2026-02-26 16:51:41.670 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+    fetch
+        first ? rows only
+2026-02-26 16:51:41.676 [restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) 
+    from
+        users u1_0
+2026-02-26 16:51:41.678 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-02-26 16:53:22.786 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-26 16:53:22.786 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-26 16:53:22.787 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-02-26 16:53:22.806 [http-nio-8080-exec-2] INFO  c.c.f.controller.AuthController - Login attempt for email: koko67@gmail.com
+2026-02-26 16:53:22.808 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:22.909 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:22.999 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:23.007 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:23.036 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:23.041 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:23.594 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:23.598 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:23.600 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:23.601 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:23.602 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:23.602 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:23.606 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:23.607 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:23.610 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:23.615 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:23.616 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:53:23.619 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:53:23.619 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:53:23.619 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:53:34.348 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:34.348 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:34.348 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:34.352 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:34.358 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:34.358 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:34.359 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:34.365 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:53:34.371 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:53:34.373 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:34.377 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:53:34.390 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:53:36.847 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:36.848 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:36.848 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:36.848 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:36.855 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:36.855 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:36.855 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:36.855 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:36.858 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:53:36.860 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:53:36.860 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:53:36.866 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:53:45.816 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:45.825 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:45.828 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:53:45.833 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        activity_logs
+        (calories, date, notes, sleep_hours, steps, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-02-26 16:53:45.996 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:45.997 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:45.999 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:45.999 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:46.002 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:46.002 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:46.004 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:46.006 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:53:46.007 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:53:46.008 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:46.011 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:53:46.018 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:53:47.582 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:47.587 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:47.588 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:47.588 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:47.589 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:47.592 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:47.595 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:47.595 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:53:47.596 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:47.596 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:47.596 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:47.599 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:53:47.599 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:53:47.602 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:53:49.688 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:49.688 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:49.688 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:49.689 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:49.697 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:49.697 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:49.698 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:49.698 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:53:49.702 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:53:49.702 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:53:49.702 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:53:49.702 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:53:58.056 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:53:58.061 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:06.321 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:06.325 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:15.616 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:15.622 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        mp1_0.id,
+        mp1_0.activity_level,
+        mp1_0.contraindications,
+        mp1_0.user_id 
+    from
+        medical_profiles mp1_0 
+    left join
+        users u1_0 
+            on u1_0.id=mp1_0.user_id 
+    where
+        u1_0.id=?
+2026-02-26 16:54:15.634 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.medical_profile_id,
+        d1_0.diagnosis 
+    from
+        medical_profile_diagnoses d1_0 
+    where
+        d1_0.medical_profile_id=?
+2026-02-26 16:54:15.637 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.medical_profile_id,
+        a1_0.allergy 
+    from
+        medical_profile_allergies a1_0 
+    where
+        a1_0.medical_profile_id=?
+2026-02-26 16:54:35.653 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:35.657 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:44.040 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:44.044 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:48.087 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:48.087 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:48.087 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:48.087 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:48.093 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:48.093 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:48.093 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:48.095 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:48.097 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:54:48.097 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:54:48.097 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:54:48.097 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:54:49.009 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:49.009 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:49.009 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:49.009 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:54:49.015 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:49.016 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:49.022 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:49.024 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:54:49.030 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:54:49.032 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:54:49.035 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:54:49.039 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:55:03.178 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:03.185 [http-nio-8080-exec-10] INFO  c.c.f.controller.FoodCheckController - User koko67@gmail.com checking food: орехи
+2026-02-26 16:55:03.188 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        mp1_0.id,
+        mp1_0.activity_level,
+        mp1_0.contraindications,
+        mp1_0.user_id 
+    from
+        medical_profiles mp1_0 
+    left join
+        users u1_0 
+            on u1_0.id=mp1_0.user_id 
+    where
+        u1_0.id=?
+2026-02-26 16:55:03.196 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        fp1_0.id,
+        fp1_0.allergen_eggs,
+        fp1_0.allergen_gluten,
+        fp1_0.allergen_lactose,
+        fp1_0.allergen_nuts,
+        fp1_0.allergen_seafood,
+        fp1_0.allergen_soy,
+        fp1_0.high_calorie,
+        fp1_0.high_purine,
+        fp1_0.high_sodium,
+        fp1_0.high_sugar,
+        fp1_0.low_iron,
+        fp1_0.name,
+        fp1_0.replacement_reason,
+        fp1_0.replacement_suggestion 
+    from
+        food_products fp1_0 
+    where
+        upper(fp1_0.name)=upper(?)
+2026-02-26 16:55:03.204 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.medical_profile_id,
+        d1_0.diagnosis 
+    from
+        medical_profile_diagnoses d1_0 
+    where
+        d1_0.medical_profile_id=?
+2026-02-26 16:55:03.206 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.medical_profile_id,
+        a1_0.allergy 
+    from
+        medical_profile_allergies a1_0 
+    where
+        a1_0.medical_profile_id=?
+2026-02-26 16:55:21.348 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:21.355 [http-nio-8080-exec-7] INFO  c.c.f.controller.FoodCheckController - User koko67@gmail.com checking food: молоко 
+2026-02-26 16:55:21.357 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        mp1_0.id,
+        mp1_0.activity_level,
+        mp1_0.contraindications,
+        mp1_0.user_id 
+    from
+        medical_profiles mp1_0 
+    left join
+        users u1_0 
+            on u1_0.id=mp1_0.user_id 
+    where
+        u1_0.id=?
+2026-02-26 16:55:21.361 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        fp1_0.id,
+        fp1_0.allergen_eggs,
+        fp1_0.allergen_gluten,
+        fp1_0.allergen_lactose,
+        fp1_0.allergen_nuts,
+        fp1_0.allergen_seafood,
+        fp1_0.allergen_soy,
+        fp1_0.high_calorie,
+        fp1_0.high_purine,
+        fp1_0.high_sodium,
+        fp1_0.high_sugar,
+        fp1_0.low_iron,
+        fp1_0.name,
+        fp1_0.replacement_reason,
+        fp1_0.replacement_suggestion 
+    from
+        food_products fp1_0 
+    where
+        upper(fp1_0.name)=upper(?)
+2026-02-26 16:55:21.365 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.medical_profile_id,
+        d1_0.diagnosis 
+    from
+        medical_profile_diagnoses d1_0 
+    where
+        d1_0.medical_profile_id=?
+2026-02-26 16:55:21.367 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.medical_profile_id,
+        a1_0.allergy 
+    from
+        medical_profile_allergies a1_0 
+    where
+        a1_0.medical_profile_id=?
+2026-02-26 16:55:25.302 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:25.305 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:32.210 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:32.243 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:32.256 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        activity_level=?,
+        age=?,
+        created_at=?,
+        email=?,
+        gender=?,
+        goal=?,
+        height=?,
+        name=?,
+        password=?,
+        photo_url=?,
+        role=?,
+        weight=? 
+    where
+        id=?
+2026-02-26 16:55:32.336 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:32.340 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:34.324 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:34.324 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:34.324 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:34.324 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:34.329 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:34.329 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:34.329 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:34.329 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:34.331 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:55:34.332 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:55:34.331 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:55:34.332 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:55:37.041 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:37.041 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:37.041 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:37.041 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:55:37.046 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:37.046 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:37.046 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:37.046 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:55:37.048 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+    order by
+        al1_0.date desc
+2026-02-26 16:55:37.048 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        we1_0.id,
+        we1_0.ml,
+        we1_0.timestamp,
+        we1_0.user_id 
+    from
+        water_entries we1_0 
+    where
+        we1_0.user_id=? 
+    order by
+        we1_0.timestamp desc
+2026-02-26 16:55:37.049 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        ne1_0.id,
+        ne1_0.calories,
+        ne1_0.carbsg,
+        ne1_0.fatg,
+        ne1_0.food,
+        ne1_0.proteing,
+        ne1_0.timestamp,
+        ne1_0.user_id 
+    from
+        nutrition_entries ne1_0 
+    where
+        ne1_0.user_id=? 
+    order by
+        ne1_0.timestamp desc
+2026-02-26 16:55:37.050 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        al1_0.id,
+        al1_0.calories,
+        al1_0.date,
+        al1_0.notes,
+        al1_0.sleep_hours,
+        al1_0.steps,
+        al1_0.user_id 
+    from
+        activity_logs al1_0 
+    where
+        al1_0.user_id=? 
+        and al1_0.date=?
+2026-02-26 16:57:09.936 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:57:09.940 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-02-26 16:57:09.944 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        mp1_0.id,
+        mp1_0.activity_level,
+        mp1_0.contraindications,
+        mp1_0.user_id 
+    from
+        medical_profiles mp1_0 
+    left join
+        users u1_0 
+            on u1_0.id=mp1_0.user_id 
+    where
+        u1_0.id=?
+2026-02-26 16:57:09.951 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        medical_profile_allergies 
+    where
+        medical_profile_id=?
+2026-02-26 16:57:09.954 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        medical_profile_diagnoses 
+    where
+        medical_profile_id=?
+2026-02-26 16:57:09.955 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        medical_profile_allergies
+        (medical_profile_id, allergy) 
+    values
+        (?, ?)
+2026-02-26 16:57:09.956 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        medical_profile_diagnoses
+        (medical_profile_id, diagnosis) 
+    values
+        (?, ?)
+2026-02-26 16:57:49.993 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.activity_level,
+        u1_0.age,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.gender,
+        u1_0.goal,
+        u1_0.height,
+        u1_0.name,
+        u1_0.password,
+        u1_0.photo_url,
+        u1_0.role,
+        u1_0.weight 
+    from
+        users u1_0 
+    where
+        u1_0.email=?
+2026-02-26 16:57:49.997 [http-nio-8080-exec-7] INFO  c.c.f.controller.FoodCheckController - User koko67@gmail.com checking food: молоко
+2026-02-26 16:57:49.999 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        mp1_0.id,
+        mp1_0.activity_level,
+        mp1_0.contraindications,
+        mp1_0.user_id 
+    from
+        medical_profiles mp1_0 
+    left join
+        users u1_0 
+            on u1_0.id=mp1_0.user_id 
+    where
+        u1_0.id=?
+2026-02-26 16:57:50.002 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        fp1_0.id,
+        fp1_0.allergen_eggs,
+        fp1_0.allergen_gluten,
+        fp1_0.allergen_lactose,
+        fp1_0.allergen_nuts,
+        fp1_0.allergen_seafood,
+        fp1_0.allergen_soy,
+        fp1_0.high_calorie,
+        fp1_0.high_purine,
+        fp1_0.high_sodium,
+        fp1_0.high_sugar,
+        fp1_0.low_iron,
+        fp1_0.name,
+        fp1_0.replacement_reason,
+        fp1_0.replacement_suggestion 
+    from
+        food_products fp1_0 
+    where
+        upper(fp1_0.name)=upper(?)
+2026-02-26 16:57:50.005 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.medical_profile_id,
+        d1_0.diagnosis 
+    from
+        medical_profile_diagnoses d1_0 
+    where
+        d1_0.medical_profile_id=?
+2026-02-26 16:57:50.006 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.medical_profile_id,
+        a1_0.allergy 
+    from
+        medical_profile_allergies a1_0 
+    where
+        a1_0.medical_profile_id=?

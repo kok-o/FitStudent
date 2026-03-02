@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: fitness-db
+    environment:
+      POSTGRES_DB: fitstudent
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fitness-backend
+    depends_on:
+      - db
+    environment:
+      - DB_URL=jdbc:postgresql://db:5432/fitstudent
+      - DB_USER=app_user
+      - DB_PASSWORD=app_password
+      - JWT_SECRET=supersecretkey12345678901234567890
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./logs:/app/logs
+
+  frontend:
+    build:
+      context: ./frontend_flutter
+      dockerfile: Dockerfile
+    container_name: fitness-frontend
+    ports:
+      - "8888:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

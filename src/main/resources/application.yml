@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/fitstudent}
+    username: ${DB_USER:app_user}
+    password: ${DB_PASSWORD:app_password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: ${JWT_SECRET:supersecretkey12345678901234567890}
+  expiration: 86400000  # 24 часа
+
+server:
+  port: 8080
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: INFO
+
+app:
+  upload-dir: ./uploads

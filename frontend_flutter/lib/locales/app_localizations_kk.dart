@@ -1,0 +1,304 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Kazakh (`kk`).
+class AppLocalizationsKk extends AppLocalizations {
+  AppLocalizationsKk([String locale = 'kk']) : super(locale);
+
+  @override
+  String get appTitle => 'SmartDiet';
+
+  @override
+  String get profile => 'Профиль';
+
+  @override
+  String get uploadPhoto => 'Фото жүктеу';
+
+  @override
+  String get uploadFailed => 'Жүктеу қатесі';
+
+  @override
+  String get photoUploaded => 'Фото жүктелді';
+
+  @override
+  String get error => 'Қате';
+
+  @override
+  String get profileDetails => 'Профиль мәліметтері';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get name => 'Аты';
+
+  @override
+  String get age => 'Жасы';
+
+  @override
+  String get gender => 'Жынысы';
+
+  @override
+  String get height => 'Бойы';
+
+  @override
+  String get weight => 'Салмағы';
+
+  @override
+  String get goal => 'Мақсаты';
+
+  @override
+  String get activity => 'Белсенділік';
+
+  @override
+  String get calculations => 'Есептеулер';
+
+  @override
+  String get bmi => 'BMI';
+
+  @override
+  String get bmr => 'BMR';
+
+  @override
+  String get tdee => 'TDEE';
+
+  @override
+  String get targetKcal => 'Мақсат ккал';
+
+  @override
+  String get proteinG => 'Ақуыз г';
+
+  @override
+  String get fatG => 'Май г';
+
+  @override
+  String get carbsG => 'Көмірсу г';
+
+  @override
+  String get preferences => 'Таңдаулар';
+
+  @override
+  String get trainingTypes => 'Жаттығу түрлері (үтірмен)';
+
+  @override
+  String get timeOfDay => 'Күн уақыты (таң/түскі/кеш)';
+
+  @override
+  String get equipment => 'Жабдық (үтірмен)';
+
+  @override
+  String get save => 'Сақтау';
+
+  @override
+  String get preferencesSaved => 'Таңдаулар сақталды';
+
+  @override
+  String get saveFailed => 'Сақтау қатесі';
+
+  @override
+  String get language => 'Тіл';
+
+  @override
+  String get langEnglish => 'Ағылшын';
+
+  @override
+  String get langRussian => 'Орыс';
+
+  @override
+  String get langKazakh => 'Қазақ';
+
+  @override
+  String get signIn => 'Кіру';
+
+  @override
+  String get welcomeBack => 'Қайта оралу';
+
+  @override
+  String get signInToContinue => 'Жалғастыру үшін кіріңіз';
+
+  @override
+  String get emailLabel => 'Email';
+
+  @override
+  String get passwordLabel => 'Құпия сөз';
+
+  @override
+  String get enterValidEmail => 'Дұрыс email енгізіңіз';
+
+  @override
+  String get enterPassword => 'Құпия сөзді енгізіңіз';
+
+  @override
+  String get min6Chars => 'Кемінде 6 таңба';
+
+  @override
+  String get dontHaveAccount => 'Тіркелгі жоқ па? Жасау';
+
+  @override
+  String get alreadyHaveAccount => 'Тіркелгіңіз бар ма? Кіру';
+
+  @override
+  String get createAccount => 'Тіркелгі жасау';
+
+  @override
+  String get createAccountTitle => 'Тіркелгі жасау';
+
+  @override
+  String get joinApp => 'FitStudent қосылыңыз';
+
+  @override
+  String get createAccountSubtitle => 'Бастау үшін тіркелгі жасаңыз';
+
+  @override
+  String get dashboard => 'Dashboard';
+
+  @override
+  String get profileNav => 'Profile';
+
+  @override
+  String get activityNav => 'Activity';
+
+  @override
+  String get dietNav => 'Diet';
+
+  @override
+  String get progressNav => 'Progress';
+
+  @override
+  String get recipesNav => 'Recipes';
+
+  @override
+  String get today => 'Today';
+
+  @override
+  String get steps => 'Steps';
+
+  @override
+  String get calories => 'Calories';
+
+  @override
+  String get sleepHours => 'Sleep h';
+
+  @override
+  String get summary => 'Summary';
+
+  @override
+  String get water => 'Water';
+
+  @override
+  String get nutrition => 'Nutrition';
+
+  @override
+  String get exportCsv => 'Export CSV';
+
+  @override
+  String get csvPreview => 'CSV Preview';
+
+  @override
+  String get date => 'Date';
+
+  @override
+  String get stepsLabel => 'Steps';
+
+  @override
+  String get caloriesBurned => 'Calories burned';
+
+  @override
+  String get sleepHoursLabel => 'Sleep hours';
+
+  @override
+  String get enterSteps => 'Enter steps';
+
+  @override
+  String get enterCalories => 'Enter calories';
+
+  @override
+  String get enterSleepHours => 'Enter sleep hours';
+
+  @override
+  String get saved => 'Saved';
+
+  @override
+  String get milliliters => 'ml';
+
+  @override
+  String get add => 'Add';
+
+  @override
+  String get waterAdded => 'Water added';
+
+  @override
+  String get food => 'Food';
+
+  @override
+  String get foodAdded => 'Food added';
+
+  @override
+  String get progress => 'Progress';
+
+  @override
+  String get last7Days => 'Last 7 Days';
+
+  @override
+  String get stepsChart => 'Steps';
+
+  @override
+  String get caloriesChart => 'Calories';
+
+  @override
+  String get sleepChart => 'Sleep (hours)';
+
+  @override
+  String get noData => 'No data available';
+
+  @override
+  String get recipes => 'Recipes';
+
+  @override
+  String get recipeName => 'Recipe Name';
+
+  @override
+  String get ingredients => 'Ingredients';
+
+  @override
+  String get instructions => 'Instructions';
+
+  @override
+  String get addRecipe => 'Add Recipe';
+
+  @override
+  String get recipeAdded => 'Recipe added';
+
+  @override
+  String get diet => 'Diet';
+
+  @override
+  String get dailyMacros => 'Daily Macros';
+
+  @override
+  String get protein => 'Protein';
+
+  @override
+  String get fat => 'Fat';
+
+  @override
+  String get carbs => 'Carbs';
+
+  @override
+  String get mealPlan => 'Meal Plan';
+
+  @override
+  String get breakfast => 'Breakfast';
+
+  @override
+  String get lunch => 'Lunch';
+
+  @override
+  String get dinner => 'Dinner';
+
+  @override
+  String get snack => 'Snack';
+}
