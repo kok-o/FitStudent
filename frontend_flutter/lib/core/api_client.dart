@@ -8,7 +8,10 @@ class ApiClient {
     _dio.options = BaseOptions(
       baseUrl: _baseUrl,
       headers: {'Content-Type': 'application/json'},
+<<<<<<< HEAD
       validateStatus: (status) => status! < 500, // Handle 404 as valid response
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     );
     if (kIsWeb) {
       final adapter = BrowserHttpClientAdapter()..withCredentials = true;

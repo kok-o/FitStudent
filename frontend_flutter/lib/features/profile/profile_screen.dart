@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:animations/animations.dart';
+<<<<<<< HEAD
 import 'package:frontend_flutter/generated/app_localizations.dart';
 import '../../l10n/app_localizations_extension.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/locale_provider.dart';
 import '../../core/api_client.dart';
 import 'package:go_router/go_router.dart';
+=======
+import 'package:frontend_flutter/l10n/app_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../core/locale_provider.dart';
+import '../../core/api_client.dart';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import 'profile_service.dart';
 import 'profile_models.dart';
 
@@ -51,11 +58,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         title: Text(t.profile),
         actions: [
+<<<<<<< HEAD
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () => context.push('/settings'),
             tooltip: t.settings,
           ),
+=======
+          Consumer(builder: (context, ref, _) {
+            return PopupMenuButton<String>(
+              icon: const Icon(Icons.language),
+              onSelected: (code) {
+                ref.read(localeProvider.notifier).setLocale(code);
+              },
+              itemBuilder: (context) => [
+                PopupMenuItem(value: 'en', child: Text(t.langEnglish)),
+                PopupMenuItem(value: 'ru', child: Text(t.langRussian)),
+                PopupMenuItem(value: 'kk', child: Text(t.langKazakh)),
+              ],
+              tooltip: t.language,
+            );
+          })
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         ],
       ),
       body: RefreshIndicator(
@@ -174,10 +198,43 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                       const SizedBox(height: 8),
+<<<<<<< HEAD
+=======
+                      OutlinedButton.icon(
+                        icon: const Icon(Icons.upload),
+                        label: Text(t.uploadPhoto),
+                        onPressed: () async {
+                          final res = await FilePicker.platform.pickFiles(type: FileType.image, withData: true);
+                          if (res == null || res.files.isEmpty) return;
+                          final file = res.files.single;
+                          final bytes = file.bytes;
+                          final name = file.name;
+                          if (bytes == null) {
+                            if (mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.uploadFailed)));
+                            }
+                            return;
+                          }
+                          try {
+                            final updated = await _service.uploadPhoto(bytes: bytes, filename: name);
+                            if (!mounted) return;
+                            setState(() {
+                              _future = Future.value(updated);
+                            });
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.photoUploaded)));
+                          } catch (e) {
+                            if (mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('${t.uploadFailed}: $e')));
+                            }
+                          }
+                        },
+                      ),
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
                     ],
                   ),
                 ),
                 const SizedBox(height: 24),
+<<<<<<< HEAD
                 // Медицинские функции
                 Row(
                   children: [
@@ -207,6 +264,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ],
                 ),
                 const SizedBox(height: 16),
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
                 // Форма редактирования основных данных
                 Card(
                   child: Padding(
@@ -242,9 +301,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         DropdownButtonFormField<String>(
                           value: _selectedGender?.toLowerCase(),
                           decoration: InputDecoration(labelText: t.gender),
+<<<<<<< HEAD
                           items: const [
                             DropdownMenuItem(value: 'male', child: Text('Male')),
                             DropdownMenuItem(value: 'female', child: Text('Female')),
+=======
+                          items: [
+                            DropdownMenuItem(value: 'male', child: Text(t.male)),
+                            DropdownMenuItem(value: 'female', child: Text(t.female)),
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
                           ],
                           onChanged: (v) => setState(() => _selectedGender = v),
                         ),
@@ -252,10 +317,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         DropdownButtonFormField<String>(
                           value: _selectedGoal,
                           decoration: InputDecoration(labelText: t.goal),
+<<<<<<< HEAD
                           items: const [
                             DropdownMenuItem(value: 'LOSE', child: Text('Lose Weight')),
                             DropdownMenuItem(value: 'MAINTAIN', child: Text('Maintain')),
                             DropdownMenuItem(value: 'GAIN', child: Text('Gain Weight')),
+=======
+                          items: [
+                            DropdownMenuItem(value: 'LOSE', child: Text(t.goalLose)),
+                            DropdownMenuItem(value: 'MAINTAIN', child: Text(t.goalMaintain)),
+                            DropdownMenuItem(value: 'GAIN', child: Text(t.goalGain)),
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
                           ],
                           onChanged: (v) => setState(() => _selectedGoal = v),
                         ),
@@ -263,10 +335,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         DropdownButtonFormField<String>(
                           value: _selectedActivity,
                           decoration: InputDecoration(labelText: t.activity),
+<<<<<<< HEAD
                           items: const [
                             DropdownMenuItem(value: 'SEDENTARY', child: Text('Sedentary')),
                             DropdownMenuItem(value: 'MODERATE', child: Text('Moderate')),
                             DropdownMenuItem(value: 'ACTIVE', child: Text('Active')),
+=======
+                          items: [
+                            DropdownMenuItem(value: 'SEDENTARY', child: Text(t.activitySedentary)),
+                            DropdownMenuItem(value: 'MODERATE', child: Text(t.activityModerate)),
+                            DropdownMenuItem(value: 'ACTIVE', child: Text(t.activityActive)),
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
                           ],
                           onChanged: (v) => setState(() => _selectedActivity = v),
                         ),

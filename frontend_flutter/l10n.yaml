@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 arb-dir: localization_new
 template-arb-file: app_en.arb
 output-localization-file: app_localizations.dart
 output-dir: lib/generated
 
+=======
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-dir: lib/l10n
+output-localization-file: app_localizations.dart
+nullable-getter: false
+untranslated-messages-file: lib/l10n/untranslated.txt
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e

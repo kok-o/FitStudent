@@ -82,6 +82,7 @@ class ProfileService {
     }
     return UserProfileDto.fromJson(data);
   }
+<<<<<<< HEAD
 
   Future<void> changePassword({
     required String currentPassword,
@@ -95,4 +96,6 @@ class ProfileService {
       throw Exception('Failed to change password: HTTP ${res.statusCode}');
     }
   }
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 }

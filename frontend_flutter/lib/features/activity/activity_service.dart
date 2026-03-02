@@ -11,10 +11,15 @@ class ActivityService {
     if (res.statusCode != 200) {
       throw Exception('Failed to load today activity: HTTP ${res.statusCode}');
     }
+<<<<<<< HEAD
     if (res.data == null || (res.data is String && (res.data as String).isEmpty)) {
       return ActivityLogDto(steps: 0, calories: 0, sleepHours: 0.0, date: DateTime.now());
     }
     return ActivityLogDto.fromJson(res.data as Map<String, dynamic>);
+=======
+    return ActivityLogDto.fromJson(res.data as Map<String, dynamic>);
+    
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
   }
 
   Future<List<ActivityLogDto>> getLogs() async {

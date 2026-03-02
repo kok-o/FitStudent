@@ -204,7 +204,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get stepsLabel => 'Шаги';
 
   @override
+<<<<<<< HEAD
   String get caloriesBurned => 'Сожжено калорий';
+=======
+  String get caloriesBurned =>
+      'Вы сожгли 2,500 калорий на этой неделе. Потрясающий прогресс!';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 
   @override
   String get sleepHoursLabel => 'Часы сна';
@@ -303,6 +308,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get snack => 'Перекус';
 
   @override
+<<<<<<< HEAD
   String get settings => 'Настройки';
 
   @override
@@ -357,3 +363,69 @@ class AppLocalizationsRu extends AppLocalizations {
   String get loginError => 'Ошибка входа. Попробуйте снова';
 }
 
+=======
+  String get goalLose => 'Похудеть';
+
+  @override
+  String get goalMaintain => 'Поддерживать';
+
+  @override
+  String get goalGain => 'Набрать вес';
+
+  @override
+  String get activitySedentary => 'Сидячий';
+
+  @override
+  String get activityModerate => 'Умеренный';
+
+  @override
+  String get activityActive => 'Активный';
+
+  @override
+  String get male => 'Мужской';
+
+  @override
+  String get female => 'Женский';
+
+  @override
+  String get home => 'Главная';
+
+  @override
+  String get notifications => 'Уведомления';
+
+  @override
+  String get markAllAsRead => 'Отметить все как прочитанные';
+
+  @override
+  String get noNotifications => 'Нет уведомлений';
+
+  @override
+  String get allCaughtUp => 'Вы все прочитали!';
+
+  @override
+  String get notificationDeleted => 'Уведомление удалено';
+
+  @override
+  String get newAchievement => 'Новое достижение разблокировано!';
+
+  @override
+  String get workoutStreak =>
+      'Вы завершили 7-дневную серию тренировок. Продолжайте!';
+
+  @override
+  String get timeForWorkout => 'Время для тренировки';
+
+  @override
+  String get eveningCardio => 'Не забудьте вечернюю кардио-сессию';
+
+  @override
+  String get weeklyReport => 'Еженедельный отчет о прогрессе';
+
+  @override
+  String get reportReady =>
+      'Ваша еженедельная сводка по фитнесу готова к просмотру';
+
+  @override
+  String get doingGreat => 'Вы отлично справляетесь!';
+}
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+<<<<<<< HEAD
 import 'package:frontend_flutter/generated/app_localizations.dart';
+=======
+import 'package:frontend_flutter/l10n/app_localizations.dart';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import '../profile/profile_service.dart';
 import '../profile/profile_models.dart';
 import '../activity/activity_service.dart';

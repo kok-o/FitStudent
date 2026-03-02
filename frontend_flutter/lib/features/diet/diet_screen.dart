@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:frontend_flutter/generated/app_localizations.dart';
+=======
+import 'package:frontend_flutter/l10n/app_localizations.dart';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import '../profile/profile_service.dart';
 import '../profile/profile_models.dart';
 
@@ -70,6 +74,33 @@ class DietScreen extends StatelessWidget {
               );
             },
           ),
+<<<<<<< HEAD
+=======
+          const SizedBox(height: 16),
+          // Sample meal plan
+          Row(
+            children: [
+              Expanded(
+                child: Text(t.mealPlan, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+              ),
+              const Chip(
+                label: Text('Example', style: TextStyle(fontSize: 12)),
+                backgroundColor: Colors.amber,
+                padding: EdgeInsets.symmetric(horizontal: 8),
+              ),
+            ],
+          ),
+          const SizedBox(height: 4),
+          const Text(
+            'This is a sample meal plan. Create your own plan or consult with a nutritionist.',
+            style: TextStyle(fontSize: 12, color: Colors.grey, fontStyle: FontStyle.italic),
+          ),
+          const SizedBox(height: 8),
+          _MealCard(title: t.breakfast, items: ['Oatmeal (250 kcal)', 'Greek Yogurt (150 kcal)']),
+          _MealCard(title: t.lunch, items: ['Grilled Chicken Salad (400 kcal)', 'Whole Grain Bread (100 kcal)']),
+          _MealCard(title: t.dinner, items: ['Salmon with Vegetables (500 kcal)', 'Brown Rice (200 kcal)']),
+          _MealCard(title: t.snack, items: ['Apple (80 kcal)', 'Almonds (160 kcal)']),
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         ],
       ),
     );
@@ -95,3 +126,25 @@ class _MacroCard extends StatelessWidget {
   }
 }
 
+<<<<<<< HEAD
+=======
+class _MealCard extends StatelessWidget {
+  final String title;
+  final List<String> items;
+  const _MealCard({required this.title, required this.items});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 8),
+      child: ListTile(
+        title: Text(title, style: const TextStyle(fontWeight: FontWeight.w600)),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: items.map((item) => Padding(padding: const EdgeInsets.only(top: 4), child: Text('• $item'))).toList(),
+        ),
+      ),
+    );
+  }
+}
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e

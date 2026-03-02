@@ -32,7 +32,12 @@
   "language": "Язык",
   "langEnglish": "Английский",
   "langRussian": "Русский",
+<<<<<<< HEAD
   "langKazakh": "Казахский",
+=======
+  "langKazakh": "Казахский"
+  ,
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
   "signIn": "Войти",
   "welcomeBack": "С возвращением",
   "signInToContinue": "Войдите, чтобы продолжить",
@@ -46,13 +51,23 @@
   "createAccount": "Создать аккаунт",
   "createAccountTitle": "Создание аккаунта",
   "joinApp": "Присоединяйся к FitStudent",
+<<<<<<< HEAD
   "createAccountSubtitle": "Создайте аккаунт, чтобы начать",
+=======
+  "createAccountSubtitle": "Создайте аккаунт, чтобы начать"
+  ,
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
   "dashboard": "Главная",
   "profileNav": "Профиль",
   "activityNav": "Активность",
   "dietNav": "Питание",
   "progressNav": "Прогресс",
+<<<<<<< HEAD
   "recipesNav": "Рецепты",
+=======
+  "recipesNav": "Рецепты"
+  ,
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
   "today": "Сегодня",
   "steps": "Шаги",
   "calories": "Калории",
@@ -97,6 +112,7 @@
   "lunch": "Обед",
   "dinner": "Ужин",
   "snack": "Перекус",
+<<<<<<< HEAD
   "settings": "Настройки",
   "themeAppearance": "Внешний вид",
   "darkMode": "Тёмная тема",
@@ -157,4 +173,28 @@
   "settings_label": "Настройки",
   "logout_confirm": "Вы уверены, что хотите выйти?",
   "cancel_label": "Отмена"
+=======
+  "goalLose": "Похудеть",
+  "goalMaintain": "Поддерживать",
+  "goalGain": "Набрать вес",
+  "activitySedentary": "Сидячий",
+  "activityModerate": "Умеренный",
+  "activityActive": "Активный",
+  "male": "Мужской",
+  "female": "Женский",
+  "home": "Главная",
+  "notifications": "Уведомления",
+  "markAllAsRead": "Отметить все как прочитанные",
+  "noNotifications": "Нет уведомлений",
+  "allCaughtUp": "Вы все прочитали!",
+  "notificationDeleted": "Уведомление удалено",
+  "newAchievement": "Новое достижение разблокировано!",
+  "workoutStreak": "Вы завершили 7-дневную серию тренировок. Продолжайте!",
+  "timeForWorkout": "Время для тренировки",
+  "eveningCardio": "Не забудьте вечернюю кардио-сессию",
+  "weeklyReport": "Еженедельный отчет о прогрессе",
+  "reportReady": "Ваша еженедельная сводка по фитнесу готова к просмотру",
+  "doingGreat": "Вы отлично справляетесь!",
+  "caloriesBurned": "Вы сожгли 2,500 калорий на этой неделе. Потрясающий прогресс!"
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 }

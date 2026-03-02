@@ -3,7 +3,10 @@ package com.cursorai.fitnessapp.service;
 import com.cursorai.fitnessapp.dto.UserDto;
 import com.cursorai.fitnessapp.dto.ProfileCalculationsDto;
 import com.cursorai.fitnessapp.dto.UserPreferenceDto;
+<<<<<<< HEAD
 import com.cursorai.fitnessapp.dto.PasswordChangeRequest;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import com.cursorai.fitnessapp.mapper.UserMapper;
 import com.cursorai.fitnessapp.mapper.UserPreferenceMapper;
 import com.cursorai.fitnessapp.model.User;
@@ -11,7 +14,10 @@ import com.cursorai.fitnessapp.model.UserPreference;
 import com.cursorai.fitnessapp.repository.UserRepository;
 import com.cursorai.fitnessapp.repository.UserPreferenceRepository;
 import lombok.RequiredArgsConstructor;
+<<<<<<< HEAD
 import org.springframework.security.crypto.password.PasswordEncoder;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,13 +25,20 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 @RequiredArgsConstructor
 public class UserService {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     private final UserRepository userRepository;
     private final UserMapper userMapper;
     private final UserPreferenceRepository userPreferenceRepository;
     private final UserPreferenceMapper userPreferenceMapper;
     private final StorageService storageService;
+<<<<<<< HEAD
     private final PasswordEncoder passwordEncoder;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 
     public UserDto getProfile(Long userId) {
         User user = userRepository.findById(userId)
@@ -111,6 +124,7 @@ public class UserService {
                 .build();
     }
 
+<<<<<<< HEAD
     private double round0(double v) {
         return Math.round(v);
     }
@@ -118,6 +132,10 @@ public class UserService {
     private double round1(double v) {
         return Math.round(v * 10.0) / 10.0;
     }
+=======
+    private double round0(double v) { return Math.round(v); }
+    private double round1(double v) { return Math.round(v * 10.0) / 10.0; }
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 
     // Preferences
     public UserPreferenceDto getPreferences(Long userId) {
@@ -154,6 +172,7 @@ public class UserService {
         user = userRepository.save(user);
         return userMapper.toDto(user);
     }
+<<<<<<< HEAD
 
     @Transactional
     public void changePassword(Long userId, PasswordChangeRequest request) {
@@ -175,4 +194,6 @@ public class UserService {
         user.setRole(User.Role.ADMIN);
         userRepository.save(user);
     }
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 }

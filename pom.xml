@@ -6,7 +6,11 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.5.7</version>
+<<<<<<< HEAD
         <relativePath/> 
+=======
+        <relativePath/> <!-- lookup parent from repository -->
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     </parent>
 	<groupId>com.example</groupId>
 	<artifactId>dart-java-spring</artifactId>

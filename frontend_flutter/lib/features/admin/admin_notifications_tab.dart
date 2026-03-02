@@ -29,7 +29,11 @@ class _AdminNotificationsTabState extends State<AdminNotificationsTab> {
 
     setState(() => _isSending = true);
     try {
+<<<<<<< HEAD
       await ApiService.post('/api/admin/notifications/broadcast', {
+=======
+      await ApiService.post('/admin/notifications/broadcast', {
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         'message': _messageController.text.trim(),
         'type': _selectedType,
       });

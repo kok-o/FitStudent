@@ -59,6 +59,7 @@ class LandingScreen extends StatelessWidget {
                   
                   SizedBox(height: size.height * 0.1),
                   
+<<<<<<< HEAD
                   // Login Button
                   SizedBox(
                     width: double.infinity,
@@ -105,6 +106,62 @@ class LandingScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+=======
+                  // Buttons Container with max width
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 400),
+                    child: Column(
+                      children: [
+                        // Login Button
+                        SizedBox(
+                          width: double.infinity,
+                          height: 56,
+                          child: ElevatedButton(
+                            onPressed: () => context.go('/login'),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              foregroundColor: AppTheme.primaryColor,
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                            ),
+                            child: const Text(
+                              'Login',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        
+                        const SizedBox(height: 16),
+                        
+                        // Register Button
+                        SizedBox(
+                          width: double.infinity,
+                          height: 56,
+                          child: OutlinedButton(
+                            onPressed: () => context.go('/register'),
+                            style: OutlinedButton.styleFrom(
+                              foregroundColor: Colors.white,
+                              side: const BorderSide(color: Colors.white, width: 2),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                            ),
+                            child: const Text(
+                              'Register',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
                     ),
                   ),
                   

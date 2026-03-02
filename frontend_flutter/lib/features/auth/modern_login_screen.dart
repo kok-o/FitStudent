@@ -5,7 +5,10 @@ import '../../core/theme/app_theme.dart';
 import '../../core/widgets/animated_button.dart';
 import '../../core/di/auth_providers.dart';
 import '../../core/auth/auth_provider.dart' as app_auth;
+<<<<<<< HEAD
 import 'package:frontend_flutter/generated/app_localizations.dart';
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 
 class ModernLoginScreen extends ConsumerStatefulWidget {
   const ModernLoginScreen({super.key});
@@ -78,6 +81,7 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
       if (!mounted) return;
       context.go('/dashboard');
     } catch (e) {
+<<<<<<< HEAD
       final t = AppLocalizations.of(context)!;
       String errorMessage = e.toString().replaceFirst('Exception: ', '');
       if (errorMessage.contains('User not found') || errorMessage.contains('Invalid password')) {
@@ -87,6 +91,10 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
       }
       setState(() {
         _errorMessage = errorMessage;
+=======
+      setState(() {
+        _errorMessage = 'Invalid email or password';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         _isLoading = false;
       });
     }
@@ -96,7 +104,10 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
+<<<<<<< HEAD
     final t = AppLocalizations.of(context)!;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     
     return Scaffold(
       body: SafeArea(
@@ -174,14 +185,22 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
         ),
         const SizedBox(height: 24),
         Text(
+<<<<<<< HEAD
           t.welcomeBack,
+=======
+          'Welcome Back!',
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
           style: theme.textTheme.displaySmall?.copyWith(
             fontWeight: FontWeight.bold,
           ),
         ),
         const SizedBox(height: 8),
         Text(
+<<<<<<< HEAD
           t.signInToContinue,
+=======
+          'Sign in to continue your fitness journey',
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
           style: theme.textTheme.bodyLarge?.copyWith(
             color: AppTheme.textSecondary,
           ),
@@ -191,7 +210,10 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
   }
 
   Widget _buildLoginForm(ThemeData theme) {
+<<<<<<< HEAD
     final t = AppLocalizations.of(context)!;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     return Form(
       key: _formKey,
       child: Column(
@@ -201,8 +223,13 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
             controller: _emailController,
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
+<<<<<<< HEAD
               labelText: t.emailLabel,
               hintText: t.emailLabel,
+=======
+              labelText: 'Email',
+              hintText: 'Enter your email',
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
               prefixIcon: const Icon(Icons.email_outlined),
               filled: true,
               fillColor: theme.brightness == Brightness.dark
@@ -211,10 +238,17 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
+<<<<<<< HEAD
                 return t.enterValidEmail;
               }
               if (!value.contains('@')) {
                 return t.enterValidEmail;
+=======
+                return 'Please enter your email';
+              }
+              if (!value.contains('@')) {
+                return 'Please enter a valid email';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
               }
               return null;
             },
@@ -226,8 +260,13 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
             controller: _passwordController,
             obscureText: _obscurePassword,
             decoration: InputDecoration(
+<<<<<<< HEAD
               labelText: t.passwordLabel,
               hintText: t.passwordLabel,
+=======
+              labelText: 'Password',
+              hintText: 'Enter your password',
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
               prefixIcon: const Icon(Icons.lock_outlined),
               suffixIcon: IconButton(
                 icon: Icon(
@@ -246,10 +285,17 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
             ),
             validator: (value) {
               if (value == null || value.isEmpty) {
+<<<<<<< HEAD
                 return t.enterPassword;
               }
               if (value.length < 6) {
                 return t.min6Chars;
+=======
+                return 'Please enter your password';
+              }
+              if (value.length < 6) {
+                return 'Password must be at least 6 characters';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
               }
               return null;
             },
@@ -317,9 +363,15 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
       child: AnimatedButton(
         onPressed: _isLoading ? null : _handleLogin,
         isLoading: _isLoading,
+<<<<<<< HEAD
         child: Text(
           t.signIn,
           style: const TextStyle(
+=======
+        child: const Text(
+          'Sign In',
+          style: TextStyle(
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -389,13 +441,20 @@ class _ModernLoginScreenState extends ConsumerState<ModernLoginScreen>
   }
 
   Widget _buildSignUpLink(ThemeData theme) {
+<<<<<<< HEAD
     final t = AppLocalizations.of(context)!;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
+<<<<<<< HEAD
             t.dontHaveAccount,
+=======
+            "Don't have an account? ",
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
             style: theme.textTheme.bodyMedium,
           ),
           TextButton(

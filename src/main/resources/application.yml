@@ -1,8 +1,14 @@
 spring:
   datasource:
+<<<<<<< HEAD
     url: ${DB_URL:jdbc:postgresql://localhost:5432/fitstudent}
     username: ${DB_USER:app_user}
     password: ${DB_PASSWORD:app_password}
+=======
+    url: jdbc:postgresql://localhost:5432/fitstudent
+    username: app_user
+    password: app_password
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -21,9 +27,14 @@ server:
   port: 8080
 
 logging:
+<<<<<<< HEAD
   config: classpath:logback-spring.xml
   level:
     root: INFO
+=======
+  level:
+    org.springframework.security: DEBUG
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 
 app:
   upload-dir: ./uploads

@@ -21,7 +21,11 @@ class _AdminUsersTabState extends State<AdminUsersTab> {
   Future<void> _loadUsers() async {
     setState(() => _isLoading = true);
     try {
+<<<<<<< HEAD
       final response = await ApiService.get('/api/admin/users?page=0&size=100');
+=======
+      final response = await ApiService.get('/admin/users?page=0&size=100');
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
       setState(() {
         _users = response['content'] ?? [];
         _isLoading = false;
@@ -38,7 +42,11 @@ class _AdminUsersTabState extends State<AdminUsersTab> {
 
   Future<void> _updateUserRole(int userId, String newRole) async {
     try {
+<<<<<<< HEAD
       await ApiService.put('/api/admin/users/$userId/role?role=$newRole', {});
+=======
+      await ApiService.put('/admin/users/$userId/role?role=$newRole', {});
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
       _loadUsers();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -76,7 +84,11 @@ class _AdminUsersTabState extends State<AdminUsersTab> {
 
     if (confirm == true) {
       try {
+<<<<<<< HEAD
         await ApiService.delete('/api/admin/users/$userId');
+=======
+        await ApiService.delete('/admin/users/$userId');
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         _loadUsers();
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(

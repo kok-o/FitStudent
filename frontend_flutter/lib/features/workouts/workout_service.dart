@@ -12,6 +12,7 @@ class WorkoutService {
     final list = (response.data as List).cast<Map<String, dynamic>>();
     return list.map(WorkoutDto.fromJson).toList();
   }
+<<<<<<< HEAD
   Future<UserWorkoutDto> completeWorkout(int workoutId, {int? actualDuration, int? actualCalories}) async {
     final response = await _api.post(
       '/api/workouts/$workoutId/complete',
@@ -22,6 +23,8 @@ class WorkoutService {
     );
     return UserWorkoutDto.fromJson(response.data as Map<String, dynamic>);
   }
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 }
 
 

@@ -22,8 +22,13 @@ class _AdminStatisticsTabState extends State<AdminStatisticsTab> {
   Future<void> _loadStatistics() async {
     setState(() => _isLoading = true);
     try {
+<<<<<<< HEAD
       final userStats = await ApiService.get('/api/admin/statistics/users');
       final workoutStats = await ApiService.get('/api/admin/statistics/workouts');
+=======
+      final userStats = await ApiService.get('/admin/statistics/users');
+      final workoutStats = await ApiService.get('/admin/statistics/workouts');
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
       
       setState(() {
         _userStats = userStats;
@@ -100,6 +105,15 @@ class _AdminStatisticsTabState extends State<AdminStatisticsTab> {
           Icons.person_add,
           Colors.purple,
         ),
+<<<<<<< HEAD
+=======
+        _buildStatCard(
+          'Avg Workouts/User',
+          _userStats!['averageWorkoutsPerUser']?.toStringAsFixed(1) ?? '0',
+          Icons.fitness_center,
+          Colors.red,
+        ),
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
       ],
     );
   }

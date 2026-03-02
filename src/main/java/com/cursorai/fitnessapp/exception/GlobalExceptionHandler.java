@@ -2,7 +2,10 @@ package com.cursorai.fitnessapp.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+<<<<<<< HEAD
 import org.springframework.web.bind.MethodArgumentNotValidException;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -13,6 +16,7 @@ import java.util.Map;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+<<<<<<< HEAD
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, Object>> handleValidationException(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
@@ -40,6 +44,8 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(response);
     }
 
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Map<String, Object>> handleRuntimeException(RuntimeException ex) {
         Map<String, Object> response = new HashMap<>();
@@ -47,7 +53,11 @@ public class GlobalExceptionHandler {
         response.put("status", HttpStatus.BAD_REQUEST.value());
         response.put("error", "Bad Request");
         response.put("message", ex.getMessage());
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         return ResponseEntity.badRequest().body(response);
     }
 
@@ -58,7 +68,11 @@ public class GlobalExceptionHandler {
         response.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
         response.put("error", "Internal Server Error");
         response.put("message", "An unexpected error occurred");
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     }
 }

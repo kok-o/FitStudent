@@ -3,7 +3,10 @@ package com.cursorai.fitnessapp.controller;
 import com.cursorai.fitnessapp.dto.UserDto;
 import com.cursorai.fitnessapp.dto.ProfileCalculationsDto;
 import com.cursorai.fitnessapp.dto.UserPreferenceDto;
+<<<<<<< HEAD
 import com.cursorai.fitnessapp.dto.PasswordChangeRequest;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import com.cursorai.fitnessapp.security.CustomUserDetails;
 import com.cursorai.fitnessapp.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -21,7 +24,11 @@ import org.springframework.web.multipart.MultipartFile;
 @RequiredArgsConstructor
 @Tag(name = "User", description = "User profile endpoints")
 public class UserController {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     private final UserService userService;
 
     @GetMapping("/profile")
@@ -61,20 +68,29 @@ public class UserController {
 
     @PutMapping("/preferences")
     @Operation(summary = "Update user preferences", security = @SecurityRequirement(name = "bearerAuth"))
+<<<<<<< HEAD
     public ResponseEntity<UserPreferenceDto> updatePreferences(@Valid @RequestBody UserPreferenceDto dto,
             Authentication authentication) {
+=======
+    public ResponseEntity<UserPreferenceDto> updatePreferences(@Valid @RequestBody UserPreferenceDto dto, Authentication authentication) {
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
         Long userId = userDetails.getId();
         return ResponseEntity.ok(userService.updatePreferences(userId, dto));
     }
 
+<<<<<<< HEAD
     @PostMapping(value = "/profile/photo", consumes = { "multipart/form-data" })
+=======
+    @PostMapping(value = "/profile/photo", consumes = {"multipart/form-data"})
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     @Operation(summary = "Upload profile photo", security = @SecurityRequirement(name = "bearerAuth"))
     public ResponseEntity<UserDto> uploadPhoto(@RequestPart("file") MultipartFile file, Authentication authentication) {
         CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
         Long userId = userDetails.getId();
         return ResponseEntity.ok(userService.uploadProfilePhoto(userId, file));
     }
+<<<<<<< HEAD
 
     @PutMapping("/profile/password")
     @Operation(summary = "Change user password", security = @SecurityRequirement(name = "bearerAuth"))
@@ -94,4 +110,6 @@ public class UserController {
         userService.makeUserAdmin(userId);
         return ResponseEntity.ok().build();
     }
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 }

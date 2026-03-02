@@ -14,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class DataInitializer implements CommandLineRunner {
 
+<<<<<<< HEAD
         private final UserRepository userRepository;
         private final WorkoutRepository workoutRepository;
         private final NotificationRepository notificationRepository;
@@ -196,4 +197,119 @@ public class DataInitializer implements CommandLineRunner {
                         foodProductRepository.saveAll(products);
                 }
         }
+=======
+    private final UserRepository userRepository;
+    private final WorkoutRepository workoutRepository;
+    private final NotificationRepository notificationRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    @Override
+    public void run(String... args) throws Exception {
+        createAdminUser();
+        if (userRepository.count() == 0) {
+            createDemoWorkouts();
+            createDemoNotifications();
+        }
+    }
+
+    private void createAdminUser() {
+        if (!userRepository.existsByEmail("admin@fitstudent.com")) {
+            User admin = User.builder()
+                    .email("admin@fitstudent.com")
+                    .password(passwordEncoder.encode("admin123"))
+                    .name("Admin")
+                    .age(25)
+                    .gender("Male")
+                    .height(180.0)
+                    .weight(75.0)
+                    .goal(User.Goal.MAINTAIN)
+                    .activityLevel(User.ActivityLevel.ACTIVE)
+                    .role(User.Role.ADMIN)
+                    .build();
+
+            userRepository.save(admin);
+        }
+    }
+
+    private void createDemoWorkouts() {
+        // Beginner workout
+        Workout beginnerWorkout = Workout.builder()
+                .title("Morning Stretch")
+                .description("Gentle stretching routine for beginners")
+                .level(Workout.Level.BEGINNER)
+                .duration(15)
+                .calories(50)
+                .exercises(Arrays.asList(
+                        "Neck rolls - 10 reps",
+                        "Shoulder shrugs - 10 reps",
+                        "Arm circles - 10 reps each direction",
+                        "Hip circles - 10 reps each direction",
+                        "Leg swings - 10 reps each leg",
+                        "Calf raises - 15 reps"
+                ))
+                .build();
+
+        // Medium workout
+        Workout mediumWorkout = Workout.builder()
+                .title("Cardio Blast")
+                .description("Moderate intensity cardio workout")
+                .level(Workout.Level.MEDIUM)
+                .duration(30)
+                .calories(200)
+                .exercises(Arrays.asList(
+                        "Jumping jacks - 1 minute",
+                        "High knees - 1 minute",
+                        "Burpees - 10 reps",
+                        "Mountain climbers - 1 minute",
+                        "Jump squats - 15 reps",
+                        "Push-ups - 10 reps",
+                        "Plank - 30 seconds"
+                ))
+                .build();
+
+        // Advanced workout
+        Workout advancedWorkout = Workout.builder()
+                .title("HIIT Challenge")
+                .description("High intensity interval training")
+                .level(Workout.Level.ADVANCED)
+                .duration(45)
+                .calories(400)
+                .exercises(Arrays.asList(
+                        "Burpee tuck jumps - 20 reps",
+                        "Diamond push-ups - 15 reps",
+                        "Single-leg deadlifts - 12 reps each leg",
+                        "Pike push-ups - 10 reps",
+                        "Jump lunges - 20 reps",
+                        "Handstand push-ups - 8 reps",
+                        "Box jumps - 15 reps",
+                        "Turkish get-ups - 5 reps each side"
+                ))
+                .build();
+
+        workoutRepository.saveAll(Arrays.asList(beginnerWorkout, mediumWorkout, advancedWorkout));
+    }
+
+    private void createDemoNotifications() {
+        List<User> users = userRepository.findAll();
+        if (!users.isEmpty()) {
+            User user = users.get(0);
+            
+            Notification welcomeNotification = Notification.builder()
+                    .user(user)
+                    .message("Welcome to FitStudent! Start your fitness journey today.")
+                    .type(Notification.Type.SYSTEM)
+                    .isRead(false)
+                    .build();
+
+            Notification motivationNotification = Notification.builder()
+                    .user(user)
+                    .message("Remember: Consistency is key to achieving your fitness goals!")
+                    .type(Notification.Type.MOTIVATION)
+                    .isRead(false)
+                    .build();
+
+            notificationRepository.saveAll(Arrays.asList(welcomeNotification, motivationNotification));
+        }
+    }
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 }

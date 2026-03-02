@@ -493,7 +493,11 @@ abstract class AppLocalizations {
   /// No description provided for @caloriesBurned.
   ///
   /// In en, this message translates to:
+<<<<<<< HEAD
   /// **'Calories burned'**
+=======
+  /// **'You\'ve burned 2,500 calories this week. Amazing progress!'**
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
   String get caloriesBurned;
 
   /// No description provided for @sleepHoursLabel.
@@ -688,6 +692,7 @@ abstract class AppLocalizations {
   /// **'Snack'**
   String get snack;
 
+<<<<<<< HEAD
   /// Settings screen label
   String get settings;
 
@@ -747,6 +752,133 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Login failed. Please try again'**
   String get loginError;
+=======
+  /// No description provided for @goalLose.
+  ///
+  /// In en, this message translates to:
+  /// **'Lose Weight'**
+  String get goalLose;
+
+  /// No description provided for @goalMaintain.
+  ///
+  /// In en, this message translates to:
+  /// **'Maintain'**
+  String get goalMaintain;
+
+  /// No description provided for @goalGain.
+  ///
+  /// In en, this message translates to:
+  /// **'Gain Weight'**
+  String get goalGain;
+
+  /// No description provided for @activitySedentary.
+  ///
+  /// In en, this message translates to:
+  /// **'Sedentary'**
+  String get activitySedentary;
+
+  /// No description provided for @activityModerate.
+  ///
+  /// In en, this message translates to:
+  /// **'Moderate'**
+  String get activityModerate;
+
+  /// No description provided for @activityActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get activityActive;
+
+  /// No description provided for @male.
+  ///
+  /// In en, this message translates to:
+  /// **'Male'**
+  String get male;
+
+  /// No description provided for @female.
+  ///
+  /// In en, this message translates to:
+  /// **'Female'**
+  String get female;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// No description provided for @markAllAsRead.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark all as read'**
+  String get markAllAsRead;
+
+  /// No description provided for @noNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'No notifications'**
+  String get noNotifications;
+
+  /// No description provided for @allCaughtUp.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'re all caught up!'**
+  String get allCaughtUp;
+
+  /// No description provided for @notificationDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Notification deleted'**
+  String get notificationDeleted;
+
+  /// No description provided for @newAchievement.
+  ///
+  /// In en, this message translates to:
+  /// **'New Achievement Unlocked!'**
+  String get newAchievement;
+
+  /// No description provided for @workoutStreak.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'ve completed a 7-day workout streak. Keep it up!'**
+  String get workoutStreak;
+
+  /// No description provided for @timeForWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Time for your workout'**
+  String get timeForWorkout;
+
+  /// No description provided for @eveningCardio.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t forget your evening cardio session'**
+  String get eveningCardio;
+
+  /// No description provided for @weeklyReport.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Progress Report'**
+  String get weeklyReport;
+
+  /// No description provided for @reportReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Your weekly fitness summary is ready to view'**
+  String get reportReady;
+
+  /// No description provided for @doingGreat.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'re doing great!'**
+  String get doingGreat;
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 }
 
 class _AppLocalizationsDelegate

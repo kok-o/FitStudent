@@ -33,6 +33,7 @@ class AuthController extends StateNotifier<AuthState> {
   void setAuthenticated(bool v) {
     state = state.copyWith(isAuthenticated: v);
   }
+<<<<<<< HEAD
 
   Future<void> logout() async {
     await global_auth.AuthState.clear();
@@ -40,6 +41,8 @@ class AuthController extends StateNotifier<AuthState> {
     await sp.remove(roleKey);
     state = const AuthState(isAuthenticated: false, role: 'guest');
   }
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 }
 
 final authProvider = StateNotifierProvider<AuthController, AuthState>((ref) => AuthController());

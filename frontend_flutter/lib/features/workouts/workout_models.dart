@@ -32,6 +32,7 @@ class WorkoutDto {
   }
 }
 
+<<<<<<< HEAD
 class UserWorkoutDto {
   UserWorkoutDto({
     required this.id,
@@ -58,4 +59,6 @@ class UserWorkoutDto {
   }
 }
 
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 

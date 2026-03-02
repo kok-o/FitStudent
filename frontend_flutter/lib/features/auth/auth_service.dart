@@ -9,6 +9,7 @@ class AuthService {
   final Dio _api;
 
   Future<void> login(String email, String password) async {
+<<<<<<< HEAD
     try {
       final response = await _api.post('/api/auth/login', data: LoginRequest(email: email, password: password).toJson());
       if (response.statusCode != 200) {
@@ -27,6 +28,16 @@ class AuthService {
         }
       }
       throw Exception('Network error or server unavailable');
+=======
+    final response = await _api.post('/api/auth/login', data: LoginRequest(email: email, password: password).toJson());
+    if (response.statusCode != 200) {
+      throw Exception('Login failed: HTTP ${response.statusCode}');
+    }
+    final data = response.data;
+    if (data is Map<String, dynamic>) {
+      final auth = AuthResponse.fromJson(data);
+      AuthState.setToken(auth.token);
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     }
   }
 

@@ -3,7 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'auth_service.dart';
 import '../../core/di/auth_providers.dart';
+<<<<<<< HEAD
 import 'package:frontend_flutter/generated/app_localizations.dart';
+=======
+import 'package:frontend_flutter/l10n/app_localizations.dart';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 
 class RegisterScreen extends ConsumerStatefulWidget {
   const RegisterScreen({super.key});

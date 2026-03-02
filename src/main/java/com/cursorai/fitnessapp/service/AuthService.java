@@ -3,7 +3,10 @@ package com.cursorai.fitnessapp.service;
 import com.cursorai.fitnessapp.dto.AuthResponse;
 import com.cursorai.fitnessapp.dto.LoginRequest;
 import com.cursorai.fitnessapp.dto.RegisterRequest;
+<<<<<<< HEAD
 import com.cursorai.fitnessapp.exception.UserAlreadyExistsException;
+=======
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import com.cursorai.fitnessapp.mapper.UserMapper;
 import com.cursorai.fitnessapp.model.User;
 import com.cursorai.fitnessapp.repository.UserRepository;
@@ -17,7 +20,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 public class AuthService {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
     private final UserRepository userRepository;
     private final UserMapper userMapper;
     private final PasswordEncoder passwordEncoder;
@@ -27,7 +34,11 @@ public class AuthService {
     @Transactional
     public AuthResponse register(RegisterRequest request) {
         if (userRepository.existsByEmail(request.getEmail())) {
+<<<<<<< HEAD
             throw new UserAlreadyExistsException("User with email " + request.getEmail() + " already exists");
+=======
+            throw new RuntimeException("User with email " + request.getEmail() + " already exists");
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
         }
 
         User user = User.builder()

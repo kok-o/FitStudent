@@ -204,7 +204,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stepsLabel => 'Steps';
 
   @override
+<<<<<<< HEAD
   String get caloriesBurned => 'Calories burned';
+=======
+  String get caloriesBurned =>
+      'You\'ve burned 2,500 calories this week. Amazing progress!';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 
   @override
   String get sleepHoursLabel => 'Sleep hours';
@@ -303,6 +308,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get snack => 'Snack';
 
   @override
+<<<<<<< HEAD
   String get settings => 'Settings';
 
   @override
@@ -357,3 +363,68 @@ class AppLocalizationsEn extends AppLocalizations {
   String get loginError => 'Login failed. Please try again';
 }
 
+=======
+  String get goalLose => 'Lose Weight';
+
+  @override
+  String get goalMaintain => 'Maintain';
+
+  @override
+  String get goalGain => 'Gain Weight';
+
+  @override
+  String get activitySedentary => 'Sedentary';
+
+  @override
+  String get activityModerate => 'Moderate';
+
+  @override
+  String get activityActive => 'Active';
+
+  @override
+  String get male => 'Male';
+
+  @override
+  String get female => 'Female';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get notifications => 'Notifications';
+
+  @override
+  String get markAllAsRead => 'Mark all as read';
+
+  @override
+  String get noNotifications => 'No notifications';
+
+  @override
+  String get allCaughtUp => 'You\'re all caught up!';
+
+  @override
+  String get notificationDeleted => 'Notification deleted';
+
+  @override
+  String get newAchievement => 'New Achievement Unlocked!';
+
+  @override
+  String get workoutStreak =>
+      'You\'ve completed a 7-day workout streak. Keep it up!';
+
+  @override
+  String get timeForWorkout => 'Time for your workout';
+
+  @override
+  String get eveningCardio => 'Don\'t forget your evening cardio session';
+
+  @override
+  String get weeklyReport => 'Weekly Progress Report';
+
+  @override
+  String get reportReady => 'Your weekly fitness summary is ready to view';
+
+  @override
+  String get doingGreat => 'You\'re doing great!';
+}
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e

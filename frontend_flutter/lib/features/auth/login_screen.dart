@@ -6,9 +6,14 @@ import '../workouts/workouts_screen.dart';
 import 'register_screen.dart';
 import '../../core/di/auth_providers.dart';
 import '../../core/auth/auth_provider.dart' as app_auth;
+<<<<<<< HEAD
 import 'package:frontend_flutter/generated/app_localizations.dart';
 import '../../core/theme/app_theme.dart';
 import '../profile/profile_provider.dart';
+=======
+import 'package:frontend_flutter/l10n/app_localizations.dart';
+import '../../core/theme/app_theme.dart';
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
 import '../../core/widgets/animated_button.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
@@ -38,6 +43,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
             _emailController.text.trim(),
             _passwordController.text,
           );
+<<<<<<< HEAD
       
       // mark global auth state for router guards
       ref.read(app_auth.authProvider.notifier).setAuthenticated(true);
@@ -64,6 +70,16 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       }
       setState(() {
         _error = errorMessage;
+=======
+      // mark global auth state for router guards
+      ref.read(app_auth.authProvider.notifier).setAuthenticated(true);
+      await ref.read(app_auth.authProvider.notifier).setRole('user');
+      if (!mounted) return;
+      context.go('/dashboard');
+    } catch (e) {
+      setState(() {
+        _error = e.toString();
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
       });
     } finally {
       if (mounted) {
@@ -137,7 +153,15 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                       const SizedBox(height: 12),
                       TextButton(
+<<<<<<< HEAD
                         onPressed: _loading ? null : () => context.go('/register'),
+=======
+                        onPressed: _loading
+                            ? null
+                            : () => Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (_) => const RegisterScreen()),
+                                ),
+>>>>>>> f37639c6a57385e5540cedd429fb442423c5077e
                         child: Text(t.dontHaveAccount),
                       ),
                     ],
